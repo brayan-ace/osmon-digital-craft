@@ -1,26 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { Services } from "@/components/site/Services";
+import { WhyUs } from "@/components/site/WhyUs";
+import { Products } from "@/components/site/Products";
+import { Gallery } from "@/components/site/Gallery";
+import { Testimonials } from "@/components/site/Testimonials";
+import { CTABanner } from "@/components/site/CTABanner";
+import { FAQ } from "@/components/site/FAQ";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Osmon Service — Computer & Digital Services in Cameroon" },
+      {
+        name: "description",
+        content:
+          "Premium computer repair, electronics, printing, photo editing and digital services in Cameroon. Fast, reliable, professional.",
+      },
+      { property: "og:title", content: "Osmon Service — Tech & Digital Solutions in Cameroon" },
+      {
+        property: "og:description",
+        content:
+          "Repairs, accessories, printing & creative work — Osmon Service delivers fast, reliable, professional tech services.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <WhyUs />
+        <Products />
+        <Gallery />
+        <Testimonials />
+        <CTABanner />
+        <FAQ />
+        <Contact />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
