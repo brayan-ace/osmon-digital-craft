@@ -15,7 +15,7 @@ export function Hero() {
         <div className="animate-fade-up">
           <div className="inline-flex items-center gap-2 glass rounded-full px-3.5 py-1.5 text-xs text-muted-foreground mb-6">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
-            Trusted Tech Partner in Cameroon
+            Trusted Tech Partner in Nigeria
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05]">
             Your Trusted{" "}
