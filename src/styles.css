@@ -148,3 +148,24 @@
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up { animation: fade-up 0.7s ease-out both; }
+
+/* 3D scroll effect */
+.scene-3d { perspective: 1400px; perspective-origin: 50% 20%; }
+.scroll-3d { transform-style: preserve-3d; will-change: transform, opacity; }
+
+@keyframes scroll3d-in {
+  from { opacity: 0; transform: perspective(1400px) rotateX(14deg) translateY(80px) scale(0.94); }
+  to   { opacity: 1; transform: perspective(1400px) rotateX(0deg) translateY(0) scale(1); }
+}
+@keyframes scroll3d-out {
+  from { opacity: 1; transform: perspective(1400px) rotateX(0deg) translateY(0) scale(1); }
+  to   { opacity: 0.6; transform: perspective(1400px) rotateX(-10deg) translateY(-40px) scale(0.97); }
+}
+
+@supports (animation-timeline: view()) {
+  .scroll-3d {
+    animation: scroll3d-in linear both, scroll3d-out linear both;
+    animation-timeline: view(), view();
+    animation-range: entry 0% cover 35%, exit 70% exit 100%;
+  }
+}

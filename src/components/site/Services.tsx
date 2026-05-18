@@ -18,7 +18,8 @@ const groups = [
     title: "Repair Services",
     items: [
       { icon: Wrench, name: "Laptop & Desktop Repair", desc: "Fast diagnosis, hardware fixes and component upgrades." },
-      { icon: ShieldCheck, name: "Software & Virus Removal", desc: "Windows install, software setup and malware cleanup." },
+      { icon: ShieldCheck, name: "Antivirus Installation", desc: "Licensed antivirus setup, malware cleanup and protection." },
+      { icon: MonitorCog, name: "Operating System Update", desc: "Windows & macOS upgrades, drivers and full optimisation." },
       { icon: Printer, name: "Printer Repair", desc: "Servicing, ink systems and paper-feed troubleshooting." },
       { icon: HardDrive, name: "Data Recovery", desc: "Recover lost files from drives, cards and devices." },
     ],

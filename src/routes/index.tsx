@@ -38,16 +38,16 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main>
+      <main className="scene-3d">
         <Hero />
-        <Services />
-        <WhyUs />
-        <Products />
-        <Gallery />
-        <Testimonials />
-        <CTABanner />
-        <FAQ />
-        <Contact />
+        <div className="scroll-3d"><Services /></div>
+        <div className="scroll-3d"><WhyUs /></div>
+        <div className="scroll-3d"><Products /></div>
+        <div className="scroll-3d"><Gallery /></div>
+        <div className="scroll-3d"><Testimonials /></div>
+        <div className="scroll-3d"><CTABanner /></div>
+        <div className="scroll-3d"><FAQ /></div>
+        <div className="scroll-3d"><Contact /></div>
       </main>
       <Footer />
       <FloatingWhatsApp />
