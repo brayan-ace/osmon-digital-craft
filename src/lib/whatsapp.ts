@@ -1,8 +1,7 @@
-export const WHATSAPP_NUMBER = "237671403756";
-export const PHONE_DISPLAY = "+237 671 403 756";
-export const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Osmon+Service+Cameroon";
+export const WHATSAPP_NUMBER = "2347066648166";
+export const PHONE_DISPLAY = "+234 706 664 8166";
+export const MAPS_URL = "https://maps.app.goo.gl/er6kKdaBfC1GtjE37";
 
-export function whatsappLink(message = "Hello Osmon Service, I would like to inquire about your services.") {
+export function whatsappLink(message = "Hello Rightwave Infotech, I would like to inquire about your services.") {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

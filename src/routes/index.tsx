@@ -16,17 +16,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Osmon Service — Computer & Digital Services in Cameroon" },
+      { title: "Rightwave Infotech — Computer & Digital Services in Nigeria" },
       {
         name: "description",
         content:
-          "Premium computer repair, electronics, printing, photo editing and digital services in Cameroon. Fast, reliable, professional.",
+          "Premium computer repair, electronics, printing, photo editing and digital services in Nigeria. Fast, reliable, professional.",
       },
-      { property: "og:title", content: "Osmon Service — Tech & Digital Solutions in Cameroon" },
+      { property: "og:title", content: "Rightwave Infotech — Tech & Digital Solutions in Nigeria" },
       {
         property: "og:description",
         content:
-          "Repairs, accessories, printing & creative work — Osmon Service delivers fast, reliable, professional tech services.",
+          "Repairs, accessories, printing & creative work — Rightwave Infotech delivers fast, reliable, professional tech services.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -38,16 +38,16 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
-      <main>
+      <main className="scene-3d">
         <Hero />
-        <Services />
-        <WhyUs />
-        <Products />
-        <Gallery />
-        <Testimonials />
-        <CTABanner />
-        <FAQ />
-        <Contact />
+        <div className="scroll-3d"><Services /></div>
+        <div className="scroll-3d"><WhyUs /></div>
+        <div className="scroll-3d"><Products /></div>
+        <div className="scroll-3d"><Gallery /></div>
+        <div className="scroll-3d"><Testimonials /></div>
+        <div className="scroll-3d"><CTABanner /></div>
+        <div className="scroll-3d"><FAQ /></div>
+        <div className="scroll-3d"><Contact /></div>
       </main>
       <Footer />
       <FloatingWhatsApp />

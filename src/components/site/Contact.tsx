@@ -8,7 +8,7 @@ export function Contact() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `Hello Osmon Service, I'm ${form.name}.\n${form.message}\n(Email: ${form.email})`;
+    const msg = `Hello Rightwave Infotech, I'm ${form.name}.\n${form.message}\n(Email: ${form.email})`;
     window.open(whatsappLink(msg), "_blank");
     setSent(true);
   };
@@ -40,11 +40,11 @@ export function Contact() {
                 <div className="font-semibold">{PHONE_DISPLAY}</div>
               </div>
             </a>
-            <a href="mailto:contact@osmonservice.cm" className="glass rounded-2xl p-4 flex items-center gap-4 hover:-translate-y-0.5 transition block">
+            <a href="mailto:contact@rightwaveinfotech.com" className="glass rounded-2xl p-4 flex items-center gap-4 hover:-translate-y-0.5 transition block">
               <div className="h-11 w-11 rounded-xl bg-primary/20 text-primary flex items-center justify-center"><Mail className="h-5 w-5" /></div>
               <div>
                 <div className="text-xs text-muted-foreground">Email</div>
-                <div className="font-semibold">contact@osmonservice.cm</div>
+                <div className="font-semibold">contact@rightwaveinfotech.com</div>
               </div>
             </a>
             <a href={MAPS_URL} target="_blank" rel="noreferrer" className="glass rounded-2xl p-4 flex items-center gap-4 hover:-translate-y-0.5 transition block">

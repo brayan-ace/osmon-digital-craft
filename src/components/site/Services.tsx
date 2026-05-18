@@ -18,7 +18,8 @@ const groups = [
     title: "Repair Services",
     items: [
       { icon: Wrench, name: "Laptop & Desktop Repair", desc: "Fast diagnosis, hardware fixes and component upgrades." },
-      { icon: ShieldCheck, name: "Software & Virus Removal", desc: "Windows install, software setup and malware cleanup." },
+      { icon: ShieldCheck, name: "Antivirus Installation", desc: "Licensed antivirus setup, malware cleanup and protection." },
+      { icon: MonitorCog, name: "Operating System Update", desc: "Windows & macOS upgrades, drivers and full optimisation." },
       { icon: Printer, name: "Printer Repair", desc: "Servicing, ink systems and paper-feed troubleshooting." },
       { icon: HardDrive, name: "Data Recovery", desc: "Recover lost files from drives, cards and devices." },
     ],
@@ -76,7 +77,7 @@ export function Services() {
                     <h4 className="mt-4 font-semibold text-base">{name}</h4>
                     <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
                     <a
-                      href={whatsappLink(`Hello Osmon Service, I'd like to book: ${name}.`)}
+                      href={whatsappLink(`Hello Rightwave Infotech, I'd like to book: ${name}.`)}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-4 inline-flex items-center text-sm font-semibold text-accent hover:text-foreground transition"
