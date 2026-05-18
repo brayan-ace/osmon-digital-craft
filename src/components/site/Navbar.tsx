@@ -34,7 +34,7 @@ export function Navbar() {
         <a href="#top" className="flex items-center gap-2.5">
           <img src={logo} alt="Rightwave Infotech" className="h-9 w-9 rounded-lg" />
           <span className="font-display font-bold tracking-tight text-lg">
-            Osmon <span className="text-gradient">Service</span>
+            Rightwave <span className="text-gradient">Infotech</span>
           </span>
         </a>
 
