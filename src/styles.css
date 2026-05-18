@@ -150,22 +150,29 @@
 .animate-fade-up { animation: fade-up 0.7s ease-out both; }
 
 /* 3D scroll effect */
-.scene-3d { perspective: 1400px; perspective-origin: 50% 20%; }
-.scroll-3d { transform-style: preserve-3d; will-change: transform, opacity; }
-
-@keyframes scroll3d-in {
-  from { opacity: 0; transform: perspective(1400px) rotateX(14deg) translateY(80px) scale(0.94); }
-  to   { opacity: 1; transform: perspective(1400px) rotateX(0deg) translateY(0) scale(1); }
+.scene-3d { perspective: 1400px; perspective-origin: 50% 20%; overflow-x: clip; }
+.scroll-3d {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  opacity: 0;
+  transform: perspective(1400px) rotateX(16deg) translateY(90px) scale(0.92);
+  transition: opacity 900ms cubic-bezier(.2,.7,.2,1), transform 900ms cubic-bezier(.2,.7,.2,1);
 }
-@keyframes scroll3d-out {
-  from { opacity: 1; transform: perspective(1400px) rotateX(0deg) translateY(0) scale(1); }
-  to   { opacity: 0.6; transform: perspective(1400px) rotateX(-10deg) translateY(-40px) scale(0.97); }
+.scroll-3d.in-3d {
+  opacity: 1;
+  transform: perspective(1400px) rotateX(0) translateY(0) scale(1);
 }
 
-@supports (animation-timeline: view()) {
-  .scroll-3d {
-    animation: scroll3d-in linear both, scroll3d-out linear both;
-    animation-timeline: view(), view();
-    animation-range: entry 0% cover 35%, exit 70% exit 100%;
-  }
+/* Card 3D tilt on hover */
+.glass {
+  transform-style: preserve-3d;
+  transition: transform 400ms cubic-bezier(.2,.7,.2,1), box-shadow 400ms;
+}
+.glass:hover {
+  transform: perspective(900px) rotateX(4deg) rotateY(-4deg) translateZ(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-3d, .scroll-3d.in-3d { opacity: 1; transform: none; transition: none; }
+  .glass:hover { transform: none; }
 }
