@@ -69,9 +69,9 @@ export function Services() {
                 {g.items.map(({ icon: Icon, name, desc }) => (
                   <div
                     key={name}
-                    className="group glass rounded-2xl p-6 hover:border-accent/40 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]"
+                    className="group glass rounded-2xl p-6 hover:md:border-accent/40 transition-all hover:md:-translate-y-1 hover:md:shadow-[var(--shadow-glow)]"
                   >
-                    <div className="h-11 w-11 rounded-xl flex items-center justify-center bg-[image:var(--gradient-primary)]/10 border border-border group-hover:scale-110 transition-transform">
+                    <div className="h-11 w-11 rounded-xl flex items-center justify-center bg-[image:var(--gradient-primary)]/10 border border-border group-hover:md:scale-110 transition-transform">
                       <Icon className="h-5 w-5 text-accent" />
                     </div>
                     <h4 className="mt-4 font-semibold text-base">{name}</h4>

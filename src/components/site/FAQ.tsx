@@ -32,7 +32,7 @@ export function FAQ() {
                 {open === i ? <Minus className="h-5 w-5 text-accent shrink-0" /> : <Plus className="h-5 w-5 text-accent shrink-0" />}
               </button>
               {open === i && (
-                <div className="px-5 pb-5 text-sm text-muted-foreground animate-fade-up">{f.a}</div>
+                <div className="px-5 pb-5 text-sm text-muted-foreground">{f.a}</div>
               )}
             </div>
           ))}

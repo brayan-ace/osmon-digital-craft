@@ -95,6 +95,13 @@
   }
   h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
   ::selection { background: color-mix(in oklab, var(--electric) 35%, transparent); }
+  
+  @media (max-width: 768px) {
+    * {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
 }
 
 @layer utilities {
@@ -104,6 +111,21 @@
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid color-mix(in oklab, white 8%, transparent);
   }
+  
+  @media (max-width: 768px) {
+    .glass {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .glass {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+  }
+  
   .text-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -117,13 +139,51 @@
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 80%);
   }
-  .glow { box-shadow: var(--shadow-glow); }
+  .glow { 
+    box-shadow: var(--shadow-glow);
+  }
+  
+  @media (max-width: 768px) {
+    .glow {
+      box-shadow: 0 0 40px -15px color-mix(in oklab, var(--electric) 35%, transparent);
+    }
+  }
+  
   .container-px { @apply px-5 md:px-8 lg:px-12; }
   .section-py { @apply py-20 md:py-28; }
   .animate-float { animation: float 6s ease-in-out infinite; }
+  
+  @media (max-width: 1024px) {
+    .animate-float { animation: float 8s ease-in-out infinite; }
+  }
+  
+  @media (prefers-reduced-motion: reduce), (max-width: 640px) {
+    .animate-float { animation: none; }
+  }
+  
   .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+  
+  @media (prefers-reduced-motion: reduce), (max-width: 768px) {
+    .animate-pulse-glow { animation: none; }
+  }
+  
   .animate-blob { animation: blob 18s ease-in-out infinite; }
+  
+  @media (max-width: 1024px) {
+    .animate-blob { animation: blob 25s ease-in-out infinite; }
+  }
+  
+  @media (prefers-reduced-motion: reduce), (max-width: 768px) {
+    .animate-blob { animation: none; }
+  }
+  
   .marquee { animation: marquee 40s linear infinite; }
+  
+  @media (max-width: 768px) {
+    .marquee { animation: marquee 60s linear infinite; }
+  }
+  
+  .animate-fade-up { animation: fade-up 0.7s ease-out both; }
 }
 
 @keyframes float {
@@ -147,32 +207,16 @@
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-up { animation: fade-up 0.7s ease-out both; }
 
-/* 3D scroll effect */
-.scene-3d { perspective: 1400px; perspective-origin: 50% 20%; overflow-x: clip; }
-.scroll-3d {
-  transform-style: preserve-3d;
-  will-change: transform, opacity;
-  opacity: 0;
-  transform: perspective(1400px) rotateX(16deg) translateY(90px) scale(0.92);
-  transition: opacity 900ms cubic-bezier(.2,.7,.2,1), transform 900ms cubic-bezier(.2,.7,.2,1);
-}
-.scroll-3d.in-3d {
-  opacity: 1;
-  transform: perspective(1400px) rotateX(0) translateY(0) scale(1);
-}
-
-/* Card 3D tilt on hover */
-.glass {
-  transform-style: preserve-3d;
-  transition: transform 400ms cubic-bezier(.2,.7,.2,1), box-shadow 400ms;
-}
-.glass:hover {
-  transform: perspective(900px) rotateX(4deg) rotateY(-4deg) translateZ(8px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-3d, .scroll-3d.in-3d { opacity: 1; transform: none; transition: none; }
-  .glass:hover { transform: none; }
+@media (max-width: 1024px) {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  @keyframes blob {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(30px,-20px) scale(1.05); }
+    66% { transform: translate(-20px,20px) scale(0.98); }
+  }
 }

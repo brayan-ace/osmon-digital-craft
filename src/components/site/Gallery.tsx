@@ -57,7 +57,7 @@ export function Gallery() {
       {active && (
         <div
           onClick={() => setActive(null)}
-          className="fixed inset-0 z-[60] bg-background/90 backdrop-blur-md flex items-center justify-center p-6 animate-fade-up"
+          className="fixed inset-0 z-[60] bg-background/90 backdrop-blur-md flex items-center justify-center p-6"
         >
           <button className="absolute top-5 right-5 p-2 rounded-full glass" aria-label="Close">
             <X />

@@ -7,12 +7,12 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden pt-28 md:pt-36 pb-20 md:pb-28">
       {/* Background layers */}
       <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
-      <div className="absolute inset-0 -z-10 bg-grid opacity-60" />
-      <div className="absolute -top-20 -left-20 -z-10 h-96 w-96 rounded-full bg-electric/30 blur-3xl animate-blob" style={{ background: "color-mix(in oklab, var(--electric) 35%, transparent)" }} />
-      <div className="absolute top-40 -right-24 -z-10 h-96 w-96 rounded-full blur-3xl animate-blob" style={{ background: "color-mix(in oklab, var(--cyan) 25%, transparent)", animationDelay: "4s" }} />
+      <div className="absolute inset-0 -z-10 bg-grid opacity-60 hidden md:block" />
+      <div className="absolute -top-20 -left-20 -z-10 h-96 w-96 rounded-full bg-electric/30 blur-2xl md:blur-3xl animate-blob hidden md:block" style={{ background: "color-mix(in oklab, var(--electric) 35%, transparent)" }} />
+      <div className="absolute top-40 -right-24 -z-10 h-96 w-96 rounded-full blur-2xl md:blur-3xl animate-blob hidden md:block" style={{ background: "color-mix(in oklab, var(--cyan) 25%, transparent)", animationDelay: "4s" }} />
 
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div className="animate-fade-up">
+        <div>
           <div className="inline-flex items-center gap-2 glass rounded-full px-3.5 py-1.5 text-xs text-muted-foreground mb-6">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             Trusted Tech Partner in Nigeria
@@ -65,14 +65,15 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative animate-fade-up [animation-delay:120ms]">
-          <div className="absolute -inset-6 rounded-3xl bg-[image:var(--gradient-primary)] opacity-20 blur-2xl" />
-          <div className="relative glass rounded-3xl p-2 shadow-[var(--shadow-card)] animate-float">
+        <div className="relative">
+          <div className="absolute -inset-6 rounded-3xl bg-[image:var(--gradient-primary)] opacity-20 hidden md:block blur-2xl md:blur-3xl" />
+          <div className="relative glass rounded-3xl p-2 shadow-[var(--shadow-card)] md:animate-float">
             <img
               src={hero}
               alt="Rightwave Infotech tech repair workspace"
               width={1920}
               height={1080}
+              loading="eager"
               className="rounded-2xl w-full h-auto"
             />
           </div>

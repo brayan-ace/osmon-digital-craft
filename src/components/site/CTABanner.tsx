@@ -6,7 +6,8 @@ export function CTABanner() {
     <section className="section-py">
       <div className="container-px mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-3xl glass p-8 md:p-14 text-center">
-          <div className="absolute -inset-px rounded-3xl opacity-50 pointer-events-none" style={{ background: "var(--gradient-primary)", filter: "blur(40px)", zIndex: -1 }} />
+          <div className="absolute -inset-px rounded-3xl opacity-50 pointer-events-none hidden md:block" style={{ background: "var(--gradient-primary)", filter: "blur(40px)", zIndex: -1 }} />
+          <div className="absolute -inset-px rounded-3xl opacity-40 pointer-events-none md:hidden" style={{ background: "var(--gradient-primary)", filter: "blur(15px)", zIndex: -1 }} />
           <h3 className="text-3xl md:text-5xl font-bold">
             Ready to get your <span className="text-gradient">tech sorted?</span>
           </h3>

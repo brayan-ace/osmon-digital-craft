@@ -36,7 +36,7 @@ export function Products() {
           {products.map((p) => (
             <div
               key={p.name}
-              className="group relative glass rounded-3xl overflow-hidden hover:-translate-y-1 transition-all hover:shadow-[var(--shadow-glow)]"
+              className="group relative glass rounded-3xl overflow-hidden hover:md:-translate-y-1 transition-all hover:md:shadow-[var(--shadow-glow)]"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img

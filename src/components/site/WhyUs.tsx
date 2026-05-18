@@ -75,7 +75,7 @@ export function WhyUs() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {points.map(({ icon: Icon, t, d }) => (
-              <div key={t} className="glass rounded-2xl p-5 hover:-translate-y-1 transition">
+              <div key={t} className="glass rounded-2xl p-5 hover:md:-translate-y-1 transition">
                 <div className="h-10 w-10 rounded-lg flex items-center justify-center bg-[image:var(--gradient-primary)]">
                   <Icon className="h-5 w-5 text-primary-foreground" />
                 </div>
