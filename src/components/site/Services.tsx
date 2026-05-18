@@ -76,7 +76,7 @@ export function Services() {
                     <h4 className="mt-4 font-semibold text-base">{name}</h4>
                     <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
                     <a
-                      href={whatsappLink(`Hello Osmon Service, I'd like to book: ${name}.`)}
+                      href={whatsappLink(`Hello Rightwave Infotech, I'd like to book: ${name}.`)}
                       target="_blank"
                       rel="noreferrer"
                       className="mt-4 inline-flex items-center text-sm font-semibold text-accent hover:text-foreground transition"

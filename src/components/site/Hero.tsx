@@ -23,7 +23,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl">
             From computer repairs and accessories to printing, photo editing and digital
-            solutions — Osmon Service delivers fast, reliable and professional service.
+            solutions — Rightwave Infotech delivers fast, reliable and professional service.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -42,7 +42,7 @@ export function Hero() {
               <Phone className="h-4 w-4" /> Call now
             </a>
             <a
-              href={whatsappLink("Hello Osmon Service, I'd like a free consultation.")}
+              href={whatsappLink("Hello Rightwave Infotech, I'd like a free consultation.")}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition px-2"
@@ -70,7 +70,7 @@ export function Hero() {
           <div className="relative glass rounded-3xl p-2 shadow-[var(--shadow-card)] animate-float">
             <img
               src={hero}
-              alt="Osmon Service tech repair workspace"
+              alt="Rightwave Infotech tech repair workspace"
               width={1920}
               height={1080}
               className="rounded-2xl w-full h-auto"

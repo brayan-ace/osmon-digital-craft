@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logo from "@/assets/osmon-logo.png";
+import logo from "@/assets/rightwave-logo.png";
 import { whatsappLink } from "@/lib/whatsapp";
 
 const links = [
@@ -32,7 +32,7 @@ export function Navbar() {
     >
       <div className="container-px mx-auto max-w-7xl flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center gap-2.5">
-          <img src={logo} alt="Osmon Service" className="h-9 w-9 rounded-lg" />
+          <img src={logo} alt="Rightwave Infotech" className="h-9 w-9 rounded-lg" />
           <span className="font-display font-bold tracking-tight text-lg">
             Osmon <span className="text-gradient">Service</span>
           </span>
@@ -52,10 +52,10 @@ export function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="tel:+237671403756"
+            href="tel:+2347066648166"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
           >
-            <Phone className="h-4 w-4" /> +237 671 403 756
+            <Phone className="h-4 w-4" /> +234 706 664 8166
           </a>
           <a
             href={whatsappLink()}

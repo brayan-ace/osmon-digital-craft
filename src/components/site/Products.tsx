@@ -23,7 +23,7 @@ export function Products() {
             </h2>
           </div>
           <a
-            href={whatsappLink("Hello Osmon Service, I'd like to see your full product catalogue.")}
+            href={whatsappLink("Hello Rightwave Infotech, I'd like to see your full product catalogue.")}
             target="_blank"
             rel="noreferrer"
             className="text-sm font-semibold text-accent hover:text-foreground"
@@ -56,7 +56,7 @@ export function Products() {
                 <h3 className="font-bold text-lg">{p.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{p.blurb}</p>
                 <a
-                  href={whatsappLink(`Hello Osmon Service, I'm interested in: ${p.name}.`)}
+                  href={whatsappLink(`Hello Rightwave Infotech, I'm interested in: ${p.name}.`)}
                   target="_blank"
                   rel="noreferrer"
                   className="mt-4 inline-flex w-full items-center justify-center rounded-full px-4 py-2.5 text-xs font-semibold text-primary-foreground bg-[image:var(--gradient-primary)] hover:opacity-90"
